@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170129205935) do
+ActiveRecord::Schema.define(version: 20170129215257) do
 
   create_table "acopios", force: :cascade do |t|
     t.string   "direccion"
@@ -28,17 +28,6 @@ ActiveRecord::Schema.define(version: 20170129205935) do
     t.string   "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "direccions", force: :cascade do |t|
-    t.string   "telefono"
-    t.string   "contacto"
-    t.string   "horario_atencion"
-    t.string   "dias_atencion"
-    t.float    "latitude"
-    t.float    "longitude"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
   end
 
   create_table "donaciones", force: :cascade do |t|
@@ -67,6 +56,16 @@ ActiveRecord::Schema.define(version: 20170129205935) do
     t.string   "region_number"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "lastname"
+    t.text     "about"
+    t.integer  "telephone"
+    t.string   "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
