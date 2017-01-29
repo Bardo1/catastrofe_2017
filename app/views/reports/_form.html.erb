@@ -1,0 +1,67 @@
+<%= form_for(report) do |f| %>
+  <% if report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(report.errors.count, "error") %> prohibited this report from being saved:</h2>
+
+      <ul>
+      <% report.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :categories %>
+    <%= f.text_field :categories %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rut %>
+    <%= f.text_field :rut %>
+  </div>
+
+  <div class="field">
+    <%= f.label :telephone %>
+    <%= f.number_field :telephone %>
+  </div>
+
+  <div class="field">
+    <%= f.label :deceased %>
+    <%= f.text_field :deceased %>
+  </div>
+
+  <div class="field">
+    <%= f.label :wounded %>
+    <%= f.number_field :wounded %>
+  </div>
+
+  <div class="field">
+    <%= f.label :disappeared %>
+    <%= f.number_field :disappeared %>
+  </div>
+
+  <div class="field">
+    <%= f.label :damaged_buildings %>
+    <%= f.number_field :damaged_buildings %>
+  </div>
+
+  <div class="field">
+    <%= f.label :damaged_vehicles %>
+    <%= f.number_field :damaged_vehicles %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

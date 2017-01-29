@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @report.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @report.description %>
+</p>
+
+<p>
+  <strong>Categories:</strong>
+  <%= @report.categories %>
+</p>
+
+<p>
+  <strong>Rut:</strong>
+  <%= @report.rut %>
+</p>
+
+<p>
+  <strong>Telephone:</strong>
+  <%= @report.telephone %>
+</p>
+
+<p>
+  <strong>Deceased:</strong>
+  <%= @report.deceased %>
+</p>
+
+<p>
+  <strong>Wounded:</strong>
+  <%= @report.wounded %>
+</p>
+
+<p>
+  <strong>Disappeared:</strong>
+  <%= @report.disappeared %>
+</p>
+
+<p>
+  <strong>Damaged buildings:</strong>
+  <%= @report.damaged_buildings %>
+</p>
+
+<p>
+  <strong>Damaged vehicles:</strong>
+  <%= @report.damaged_vehicles %>
+</p>
+
+<%= link_to 'Edit', edit_report_path(@report) %> |
+<%= link_to 'Back', reports_path %>
